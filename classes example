@@ -1,0 +1,26 @@
+using System;
+
+namespace classes_example
+{
+    public class Person
+    {
+        public string FirstName;
+        public string LastName;
+
+        public void introduce()
+        {
+            Console.WriteLine("My name is " + FirstName + " " + LastName + ".");
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var shantanu = new Person();
+            shantanu.FirstName = "Shantanu";
+            shantanu.LastName = "Chichmalkar";
+            shantanu.introduce();
+        }
+    }
+}
