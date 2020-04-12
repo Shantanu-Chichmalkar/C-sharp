@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+
+namespace practiceList
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var Friends = new List<String>();
+            while (true)
+            {
+                Console.WriteLine("Enter any Name: ");
+                String FriendName = Console.ReadLine();
+                Friends.Add(FriendName);
+                if (string.IsNullOrEmpty(FriendName))
+                    break;
+            }
+
+            int numbers = Friends.Count;
+
+            if (numbers > 2)
+            {
+                int c = numbers - 3;
+                Console.WriteLine(Friends[0] + ", " + Friends[1] + " and " + c + " others liked your post");
+            }
+            else if (numbers == 2)
+            {
+                Console.WriteLine(Friends[0] + " and " + Friends[1] + " liked your post");
+            }
+            else
+            {
+                Console.WriteLine(Friends[0] + " liked your post");
+            }
+        }
+    }
+}
